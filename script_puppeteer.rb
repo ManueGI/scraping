@@ -50,11 +50,8 @@ Puppeteer.launch(headless: false, executable_path: '/usr/bin/google-chrome').the
               keywords = create_array(html_doc,"tr td:nth-child(4)")
               comments = create_array(html_doc,"tr td:nth-child(5)")
 
-              print names
-              print links
-              print categories
-              print keywords
-              print comments
+              pairs = names.zip(links, categories, keywords, comments)
+              print pairs [0]
 
               browser.close
               end
